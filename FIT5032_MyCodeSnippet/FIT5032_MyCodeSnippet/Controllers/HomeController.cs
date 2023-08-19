@@ -1,8 +1,10 @@
-﻿using System;
+﻿using FIT5032_MyCodeSnippet.Models.HelloWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FIT5032_MyCodeSnippet.Models.HelloWorld;
 
 namespace FIT5032_MyCodeSnippet.Controllers
 {
@@ -15,7 +17,11 @@ namespace FIT5032_MyCodeSnippet.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            //ViewBag.Message = "Your application description page.";
+
+            Hello hello = new Hello();
+
+            ViewBag.Message = hello.GetHello();
 
             return View();
         }
